@@ -7,18 +7,84 @@
 #icon = "home"
 #newtab = true
 
+
+[[main]]
+identifier = "home"
+name = "Главная"
+url = "/"
+weight = 1
+
+[[main.params]]
+icon = "home"
+
+[[main]]
+identifier = "portfolio"
+name = "Портфолио"
+url = "/portfolio/"
+weight = 2
+
+[[main.params]]
+icon = "briefcase"
+
+[[main]]
+identifier = "documents"
+name = "Документы"
+url = "/documents/"
+weight = 3
+
+[[main.params]]
+icon = "file-type-doc"
+
+[[main]]
+identifier = "students"
+name = "Обучающимся"
+url = "/students/"
+weight = 4
+
+[[main.params]]
+icon = "school"
+
+[[main]]
+identifier = "blog"
+name = "Блог"
+url = "/archives/"
+weight = 5
+
+[[main.params]]
+icon = "blockquote"
+
+[[main]]
+identifier = "publications"
+name = "Публикации"
+url = "/publications/"
+weight = 6
+
+[[main.params]]
+icon = "news"
+
+[[main]]
+identifier = "guestbook"
+name = "Гостевая книга"
+url = "/guestbook/"
+weight = 99
+
+[[main.params]]
+icon = "message-plus"
+
+
+
 [[social]]
-identifier = "github"
-name = "GitHub"
-url = "https://github.com/CaiJimmy/hugo-theme-stack"
+identifier = "email"
+name = "Email"
+url = "mailto:your@email.com"
 
 [social.params]
-icon = "brand-github"
+icon = "mail"
 
 [[social]]
-identifier = "twitter"
-name = "Twitter"
-url = "https://twitter.com"
+identifier = "vk"
+name = "ВКонтакте"
+url = "https://vk.com/your_vk_username"
 
 [social.params]
-icon = "brand-twitter"
+icon = "brand-vk"

@@ -1,0 +1,218 @@
+<div id="vk_comments_{{ .Page.File.UniqueID }}" class="vk-comments-widget">
+    <!-- Состояние загрузки -->
+    <div class="vk-comments-loading">
+        <div class="loading-spinner"></div>
+        <p>Загружаем комментарии...</p>
+    </div>
+    <!-- Состояние ошибки (изначально скрыто) -->
+    <div class="vk-comments-error" style="display: none;">
+        <div class="error-icon">💬</div>
+        <h3>Комментарии временно недоступны</h3>
+        <p>Обсудить материал можно в нашей группе VK</p>
+        <a href="{{ .Site.Params.vk.groupUrl | default "https://vk.com" }}" target="_blank" class="vk-link">Перейти к обсуждению</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+// Конфигурация из параметров сайта
+const vkConfig = {
+    appId: "{{ .Site.Params.vk.appId }}", // Берём из конфига
+    limit: {{ .Get "limit" | default 10 }},
+    pageUrl: "{{ .Page.Permalink }}",
+    pageId: "{{ .Page.File.UniqueID }}",
+    groupUrl: "{{ .Site.Params.vk.groupUrl | default "https://vk.com" }}"
+};
+
+// Управление состояниями виджета
+function showElement(selector, show) {
+    const el = document.querySelector(`#vk_comments_${vkConfig.pageId} ${selector}`);
+    if (el) el.style.display = show ? 'flex' : 'none';
+}
+
+// Основная функция инициализации виджета VK
+function initVKWidget() {
+    const containerId = `vk_comments_${vkConfig.pageId}`;
+    
+    // Показываем индикатор загрузки, скрываем сообщение об ошибке
+    showElement('.vk-comments-loading', true);
+    showElement('.vk-comments-error', false);
+
+    // Если VK API загружен, создаём виджет
+    if (window.VK && VK.Widgets) {
+        VK.Widgets.Comments(containerId, {
+            limit: vkConfig.limit,
+            pageUrl: vkConfig.pageUrl,
+            attach: false
+        }, vkConfig.appId);
+
+        // Через 3 секунды проверяем, загрузился ли виджет
+        setTimeout(() => {
+            const container = document.getElementById(containerId);
+            const hasWidget = container && container.querySelector('iframe, .vk_widget');
+            if (hasWidget) {
+                // Виджет загрузился успешно
+                showElement('.vk-comments-loading', false);
+            } else {
+                // Виджет не появился, показываем ошибку
+                showElement('.vk-comments-loading', false);
+                showElement('.vk-comments-error', true);
+            }
+        }, 3000);
+    } else {
+        // Если VK API не загрузилось
+        console.error('VK Widgets API not loaded');
+        showElement('.vk-comments-loading', false);
+        showElement('.vk-comments-error', true);
+    }
+}
+
+// Функция загрузки VK API
+function loadVKAPI() {
+    // Удаляем предыдущий скрипт, если он есть
+    const oldScript = document.querySelector('script[src*="vk.com/js/api"]');
+    if (oldScript) oldScript.remove();
+
+    const script = document.createElement('script');
+    script.src = 'https://vk.com/js/api/openapi.js?169';
+    script.async = true;
+    
+    script.onload = initVKWidget;
+    script.onerror = () => {
+        // Если не удалось загрузить API
+        showElement('.vk-comments-loading', false);
+        showElement('.vk-comments-error', true);
+    };
+    
+    document.head.appendChild(script);
+}
+
+// Загружаем VK API после полной загрузки страницы
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadVKAPI);
+} else {
+    loadVKAPI();
+}
+</script>
+
+<style>
+.vk-comments-widget {
+    margin: 40px 0;
+    min-height: 200px;
+    position: relative;
+}
+
+/* Стили для состояния загрузки */
+.vk-comments-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    color: #666;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e5e5e5;
+    border-top-color: #4C75A3; /* Цвет VK */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 16px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Стили для состояния ошибки */
+.vk-comments-error {
+    display: none; /* Скрыто по умолчанию */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 1px solid #e5e5e5;
+}
+
+.error-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.vk-comments-error h3 {
+    margin: 0 0 8px 0;
+    color: #333;
+}
+
+.vk-comments-error p {
+    margin: 0 0 20px 0;
+    color: #666;
+}
+
+.vk-link {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #4C75A3;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.vk-link:hover {
+    background-color: #3B5F8A;
+}
+</style>
+
+<!-- Старый вариант VK -->
+<!-- <div id="vk_comments_{{ .Page.File.UniqueID }}" class="vk-comments-widget"></div>
+
+<script type="text/javascript">
+// Конфигурация
+var vkConfig = {
+    appId: "{{ .Get "appId" | default "5165443" }}",
+    limit: {{ .Get "limit" | default "10" }},
+    attach: "{{ .Get "attach" | default "*" }}",
+    autoPublish: {{ .Get "autoPublish" | default "1" }}
+};
+
+// Инициализация
+window.vkAsyncInit = function() {
+    VK.init({
+        apiId: vkConfig.appId,
+        onlyWidgets: true
+    });
+    
+    VK.Widgets.Comments("vk_comments_{{ .Page.File.UniqueID }}", {
+        limit: vkConfig.limit,
+        attach: vkConfig.attach,
+        autoPublish: vkConfig.autoPublish,
+        pageUrl: "{{ .Page.Permalink }}"
+    });
+};
+
+// Загрузка VK API
+var script = document.createElement('script');
+script.src = 'https://vk.com/js/api/openapi.js?169';
+script.async = true;
+script.onload = function() {
+    if (window.VK && window.vkAsyncInit) {
+        window.vkAsyncInit();
+    }
+};
+document.head.appendChild(script);
+</script>
+
+<style>
+.vk-comments-widget {
+    margin: 40px 0;
+    padding-top: 20px;
+    border-top: 2px solid var(--border-color);
+}
+</style> -->

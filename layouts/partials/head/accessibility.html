@@ -1,0 +1,439 @@
+{{ if .Site.Params.accessibility.enabled }}
+<style>
+/* Панель доступности */
+.accessibility-panel {
+  position: fixed !important;
+  bottom: 20px !important;
+  left: 20px !important;
+  z-index: 999 !important;
+  pointer-events: none !important;
+}
+
+.accessibility-panel > * {
+  pointer-events: auto !important;
+}
+
+
+/* Кнопка переключения - ФИКСИРОВАННЫЙ РАЗМЕР */
+.accessibility-toggle {
+  width: 60px !important;      /* Фиксированная ширина */
+  height: 60px !important;     /* Фиксированная высота */
+  background: #000000 !important;
+  color: #FFFFFF !important;
+  border: 3px solid #000000 !important;
+  font-size: 28px !important;  /* Фиксированный размер шрифта */
+  font-weight: bold !important;
+  cursor: pointer !important;
+  border-radius: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: center !important;
+  line-height: 1 !important;
+  position: relative !important;
+}
+
+/* Стили для SVG иконок */
+.accessibility-toggle svg {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+/* Иконка выключенного состояния всегда видна по умолчанию */
+.accessibility-toggle .off {
+  display: block !important;
+}
+
+/* Иконка включенного состояния скрыта по умолчанию */
+.accessibility-toggle .on {
+  display: none !important;
+}
+
+/* При активном состоянии показываем иконку включенного режима */
+.accessibility-toggle.active .off {
+  display: none !important;
+}
+
+.accessibility-toggle.active .on {
+  display: block !important;
+}
+
+
+/* Контейнер для иконок и подписи */
+.toggle-container {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+
+/* Активное состояние */
+.accessibility-toggle.active {
+  background: #0000FF !important;
+}
+
+/* Высококонтрастный режим */
+.high-contrast-mode {
+  --hc-bg: #FFFFFF;
+  --hc-text: #000000;
+  --hc-primary: #0000FF;
+  --hc-secondary: #FF0000;
+  --hc-accent: #008000;
+  --hc-link: #0000EE;
+  --hc-focus: #FFA500;
+  --hc-border: #000000;
+}
+
+.high-contrast-mode body {
+  background-color: var(--hc-bg) !important;
+  color: var(--hc-text) !important;
+  font-size: 18px !important;
+  line-height: 1.8 !important;
+}
+
+/* Force larger titles in lists and sections */
+.high-contrast-mode .article-title {
+  font-size: 24px !important;
+  line-height: 1.4 !important;
+  color: var(--hc-link) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+/* Ensure consistent title styling regardless of link nesting */
+.high-contrast-mode .article-title a {
+  color: var(--hc-link) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+}
+
+/* Remove default underline from card wrappers in lists */
+.high-contrast-mode .article-list--compact article > a,
+.high-contrast-mode .article-list--tile article > a {
+  text-decoration: none !important;
+  color: var(--hc-text) !important; /* Reset wrapper color to text */
+}
+
+.high-contrast-mode .section-term {
+  font-size: 32px !important;
+  line-height: 1.3 !important;
+  font-weight: bold !important;
+}
+
+.high-contrast-mode .section-title {
+  font-size: 28px !important;
+  line-height: 1.4 !important;
+}
+
+/* Sidebar font reset */
+.high-contrast-mode .sidebar {
+  font-size: 1rem !important;
+}
+
+/* Ensure menu in sidebar stays large */
+.high-contrast-mode .sidebar .menu {
+  font-size: 18px !important;
+}
+
+.high-contrast-mode a {
+  color: var(--hc-link) !important;
+  text-decoration: underline !important;
+  font-weight: bold !important;
+}
+
+.high-contrast-mode a:hover,
+.high-contrast-mode a:focus {
+  outline: 3px solid var(--hc-focus) !important;
+  outline-offset: 2px !important;
+}
+
+/* Fix Widget Font Sizes (TOC, Tag Cloud) */
+.high-contrast-mode .widget--toc,
+.high-contrast-mode .tagCloud-tags a {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+
+/* Improve visibility for Categories and Tags (Article & Footer) */
+/* Improve visibility for Categories and Tags (Article & Footer) */
+.high-contrast-mode .article-category a,
+.high-contrast-mode .article-tags a {
+  border: 2px solid var(--hc-text) !important;
+  background: var(--hc-bg) !important;
+  color: var(--hc-text) !important;
+  padding: 5px 10px !important;
+  display: inline-block !important;
+  margin: 2px !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+
+.high-contrast-mode .widget a {
+  color: var(--hc-link) !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}
+
+/* Tag Cloud specific high contrast styling */
+.high-contrast-mode .tagCloud-tags a {
+  border: 2px solid var(--hc-text) !important;
+  background: var(--hc-bg) !important;
+  color: var(--hc-text) !important;
+  padding: 5px 10px !important;
+  display: inline-block !important;
+  margin: 2px !important;
+}
+
+/* Fix Font Sizes for Archives and Search */
+.high-contrast-mode .widget.archives,
+.high-contrast-mode .search-form.widget {
+  font-size: 18px !important;
+}
+
+/* Improve visibility for Search Input */
+.high-contrast-mode .search-form input {
+  font-size: 24px !important;
+  border: 3px solid var(--hc-border) !important;
+  background: var(--hc-bg) !important;
+  color: var(--hc-text) !important;
+  padding: 15px !important;
+  display: block !important;
+  width: 100% !important;
+}
+
+/* Hide search label */
+.high-contrast-mode .search-form label {
+  display: none !important;
+}
+/* Increase search button size */
+.high-contrast-mode .search-form button {
+  width: 60px !important;
+  height: 60px !important;
+  font-size: 24px !important;
+  padding: 10px !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  margin: 0 !important;
+}
+/* Adjust form container to accommodate button positioning */
+.high-contrast-mode .search-form {
+  position: relative !important;
+  display: inline-block !important;
+  width: 100% !important;
+  border: 3px solid var(--hc-border) !important;
+  border-radius: 0 !important; /* Remove rounded corners */
+}
+
+/* Adjust input field to not overlap with button */
+.high-contrast-mode .search-form input {
+  padding-right: 70px !important;
+  border: none !important;
+  outline: none !important;
+}
+/* Style button to match the form */
+.high-contrast-mode .search-form button {
+  border: none !important;
+  border-left: 3px solid var(--hc-border) !important; /* Add border to match form */
+  border-radius: 0 !important; /* Remove rounded corners */
+  background: var(--hc-bg) !important;
+  color: var(--hc-text) !important;
+}
+
+
+
+
+/* Adjust widget search form specifically */
+.high-contrast-mode .search-form.widget input {
+  font-size: 24px !important;
+  padding: 15px !important;
+}
+
+.high-contrast-mode .search-form.widget button {
+  width: 60px !important;
+  height: 60px !important;
+  font-size: 24px !important;
+}
+
+/* Improve visibility for Archive Links */
+.high-contrast-mode .archives-year a {
+  font-size: 18px !important;
+  color: var(--hc-link) !important;
+  font-weight: bold !important;
+  text-decoration: underline !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 5px !important;
+  width: 100% !important;
+}
+
+.high-contrast-mode .year {
+  color: var(--hc-link) !important;
+}
+
+.high-contrast-mode .count {
+  color: var(--hc-text) !important;
+  font-weight: bold !important;
+}
+
+.high-contrast-mode button,
+.high-contrast-mode .btn {
+  border: 3px solid var(--hc-border) !important;
+  background: var(--hc-bg) !important;
+  color: var(--hc-text) !important;
+  font-weight: bold !important;
+  padding: 10px 20px !important;
+}
+
+.high-contrast-mode *:focus {
+  outline: 3px solid var(--hc-focus) !important;
+  outline-offset: 2px !important;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .accessibility-panel {
+    bottom: 10px !important;
+    left: 10px !important;
+    max-width: calc(100vw - 20px) !important;
+  }
+  
+  .accessibility-toggle {
+    width: 50px !important;
+    height: 50px !important;
+    font-size: 24px !important;
+  }
+
+}
+
+/* Дополнительные брейкпоинты для очень маленьких устройств */
+@media (max-width: 480px) {
+  .accessibility-panel {
+    bottom: 5px !important;
+    left: 5px !important;
+  }
+
+  .accessibility-toggle {
+    width: 45px !important;
+    height: 45px !important;
+    font-size: 20px !important;
+  }
+
+}
+</style>
+
+<script>
+(function() {
+  try {
+    var savedMode = localStorage.getItem('highContrastMode');
+    if (savedMode === 'enabled') {
+      document.documentElement.classList.add('high-contrast-mode');
+    }
+  } catch (e) {
+    console.error('Accessibility: Cannot restore mode', e);
+  }
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Создаем контейнер для панели
+  const panel = document.createElement('div');
+  panel.className = 'accessibility-panel';
+
+  // Создаем кнопку переключения
+  const toggleBtn = document.createElement('button');
+  toggleBtn.className = 'accessibility-toggle';
+  toggleBtn.innerHTML = '<div class="toggle-container">' +
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-icon off icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-2"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 4h-2l-3 10v2.5" /><path d="M16 4h2l3 10v2.5" /><path d="M10 16l4 0" /><path d="M14 16.5a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /><path d="M3 16.5a3.5 3.5 0 1 0 7 0a3.5 3.5 0 1 0 -7 0" /></svg>' +
+                        '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="toggle-icon on icon icon-tabler icons-tabler-outline icon-tabler-eyeglass-off"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.536 5.546l-2.536 8.454" /><path d="M16 4h2l3 10" /><path d="M10 16h4" /><path d="M19.426 19.423a3.5 3.5 0 0 1 -5.426 -2.923v-2.5m4 0h3v2.5c0 .157 -.01 .312 -.03 .463" /><path d="M10 16.5a3.5 3.5 0 0 1 -7 0v-2.5h7v2.5" /><path d="M3 3l18 18" /></svg>' +
+                        '</div>';
+  
+  toggleBtn.title = 'Включить/выключить режим для слабовидящих';
+  
+  // Устанавливаем стили для кнопки
+  Object.assign(toggleBtn.style, {
+    width: '60px',
+    height: '60px',
+    fontSize: '28px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  });
+
+  // Синхронизация состояния кнопки с текущим режимом
+  if (document.documentElement.classList.contains('high-contrast-mode')) {
+    toggleBtn.classList.add('active');
+    toggleBtn.setAttribute('aria-label', 'Режим для слабовидящих: включен');
+  } else {
+    toggleBtn.setAttribute('aria-label', 'Режим для слабовидящих: выключен');
+  }
+
+  // Функция переключения
+  function toggleHighContrast() {
+    const html = document.documentElement;
+    const isActive = html.classList.toggle('high-contrast-mode');
+    
+    if (isActive) {
+      toggleBtn.classList.add('active');
+      toggleBtn.setAttribute('aria-label', 'Режим для слабовидящих: включен');
+    } else {
+      toggleBtn.classList.remove('active');
+      toggleBtn.setAttribute('aria-label', 'Режим для слабовидящих: выключен');
+    }
+    
+    try {
+      localStorage.setItem('highContrastMode', isActive ? 'enabled' : 'disabled');
+    } catch (e) {
+      console.warn('Cannot save to localStorage:', e);
+    }
+  }
+
+  toggleBtn.addEventListener('click', toggleHighContrast);
+
+  // Skip Link
+  function createSkipLink() {
+    const mainContent = document.querySelector('main, article, .content, #content');
+    if (mainContent) {
+      if (!mainContent.id) mainContent.id = 'main-content-' + Date.now();
+      
+      const skipLink = document.createElement('a');
+      skipLink.href = '#' + mainContent.id;
+      skipLink.className = 'skip-to-content';
+      skipLink.textContent = 'Перейти к содержанию';
+      
+      Object.assign(skipLink.style, {
+        position: 'absolute',
+        top: '-40px',
+        left: '0',
+        background: '#0000FF',
+        color: 'white',
+        padding: '10px 15px',
+        zIndex: '10000'
+      });
+      
+      skipLink.addEventListener('focus', function() { this.style.top = '0'; });
+      skipLink.addEventListener('blur', function() { this.style.top = '-40px'; });
+      
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+  }
+
+  panel.appendChild(toggleBtn);
+  document.body.appendChild(panel);
+  createSkipLink();
+});
+</script>
+
+<meta name="accessibility-features" content="high-contrast">
+{{ end }}

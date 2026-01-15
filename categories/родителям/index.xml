@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Родителям on Личная страница преподавателя</title><link>https://sursky.github.io/huhugo/categories/%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%D0%BC/</link><description>Recent content in Родителям on Личная страница преподавателя</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Wed, 14 Jan 2026 15:28:59 +0000</lastBuildDate><atom:link href="https://sursky.github.io/huhugo/categories/%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8F%D0%BC/index.xml" rel="self" type="application/rss+xml"/><item><title>Для родителей</title><link>https://sursky.github.io/huhugo/p/%D0%B4%D0%BB%D1%8F-%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9/</link><pubDate>Wed, 14 Jan 2026 15:28:59 +0000</pubDate><guid>https://sursky.github.io/huhugo/p/%D0%B4%D0%BB%D1%8F-%D1%80%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9/</guid><description>&lt;h2 id="-3-страница--contentparentsmd"&gt;👨‍👩‍👧‍👦 &lt;strong&gt;3. Страница &amp;ldquo;Для родителей&amp;rdquo;&lt;/strong&gt; (&lt;code&gt;content/parents.md&lt;/code&gt;)
+&lt;/h2&gt;&lt;h2 id="-контакты-и-режим-работы"&gt;📞 Контакты и режим работы
+&lt;/h2&gt;&lt;h3 id="основные-контакты"&gt;Основные контакты
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Классный руководитель:&lt;/strong&gt; Иванов Иван Иванович&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Телефон:&lt;/strong&gt; +7 (999) 123-45-67 (с 8:00 до 20:00)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a class="link" href="mailto:ivanov@school1.ru" &gt;ivanov@school1.ru&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Кабинет:&lt;/strong&gt; №304 (3 этаж)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="часы-для-консультаций-родителей"&gt;Часы для консультаций родителей
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;День&lt;/th&gt;
+&lt;th&gt;Время&lt;/th&gt;
+&lt;th&gt;Формат&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Понедельник&lt;/td&gt;
+&lt;td&gt;16:00-17:00&lt;/td&gt;
+&lt;td&gt;Очно&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Среда&lt;/td&gt;
+&lt;td&gt;18:00-19:00&lt;/td&gt;
+&lt;td&gt;Онлайн (Zoom)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Суббота&lt;/td&gt;
+&lt;td&gt;11:00-13:00&lt;/td&gt;
+&lt;td&gt;Очно (по записи)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Запись на консультацию:&lt;/strong&gt; &lt;a class="link" href="https://sursky.github.io/huhugo/consultation-form" &gt;📅 Записаться онлайн&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="-учебный-процесс"&gt;📚 Учебный процесс
+&lt;/h2&gt;&lt;h3 id="расписание-уроков-2025-2026"&gt;Расписание уроков 2025-2026
+&lt;/h3&gt;&lt;p&gt;10 &amp;ldquo;А&amp;rdquo; класс (математический профиль)&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;День&lt;/th&gt;
+&lt;th&gt;1 урок&lt;/th&gt;
+&lt;th&gt;2 урок&lt;/th&gt;
+&lt;th&gt;3 урок&lt;/th&gt;
+&lt;th&gt;4 урок&lt;/th&gt;
+&lt;th&gt;5 урок&lt;/th&gt;
+&lt;th&gt;6 урок&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Пн&lt;/td&gt;
+&lt;td&gt;Алгебра&lt;/td&gt;
+&lt;td&gt;Геометрия&lt;/td&gt;
+&lt;td&gt;Физика&lt;/td&gt;
+&lt;td&gt;Информатика&lt;/td&gt;
+&lt;td&gt;Английский&lt;/td&gt;
+&lt;td&gt;Физ-ра&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Вт&lt;/td&gt;
+&lt;td&gt;Алгебра&lt;/td&gt;
+&lt;td&gt;Геометрия&lt;/td&gt;
+&lt;td&gt;Русский&lt;/td&gt;
+&lt;td&gt;История&lt;/td&gt;
+&lt;td&gt;Химия&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ср&lt;/td&gt;
+&lt;td&gt;Алгебра&lt;/td&gt;
+&lt;td&gt;Мат. анализ&lt;/td&gt;
+&lt;td&gt;Физика&lt;/td&gt;
+&lt;td&gt;Информатика&lt;/td&gt;
+&lt;td&gt;Обществознание&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Чт&lt;/td&gt;
+&lt;td&gt;Геометрия&lt;/td&gt;
+&lt;td&gt;Алгебра&lt;/td&gt;
+&lt;td&gt;Биология&lt;/td&gt;
+&lt;td&gt;Литература&lt;/td&gt;
+&lt;td&gt;Проектная работа&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Пт&lt;/td&gt;
+&lt;td&gt;Мат. анализ&lt;/td&gt;
+&lt;td&gt;Геометрия&lt;/td&gt;
+&lt;td&gt;Английский&lt;/td&gt;
+&lt;td&gt;Экономика&lt;/td&gt;
+&lt;td&gt;Классный час&lt;/td&gt;
+&lt;td&gt;-&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Полное расписание:&lt;/strong&gt; &lt;a class="link" href="https://sursky.github.io/huhugo/parents/schedule_10a.pdf" &gt;📋 Скачать PDF&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="домашние-задания"&gt;Домашние задания
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Публикуются:&lt;/strong&gt; Ежедневно в 15:00&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Платформа:&lt;/strong&gt; &lt;a class="link" href="https://%d0%b4%d0%bd%d0%b5%d0%b2%d0%bd%d0%b8%d0%ba.%d1%88%d0%ba%d0%be%d0%bb%d0%b01.%d1%80%d1%83%d1%81" target="_blank" rel="noopener"
+&gt;Электронный дневник&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Сроки выполнения:&lt;/strong&gt; Согласно учебному плану&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Памятка по домашним заданиям:&lt;/strong&gt; &lt;a class="link" href="https://sursky.github.io/huhugo/parents/homework_guide.pdf" &gt;📝 homework_guide.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="-успеваемость-и-аттестация"&gt;📊 Успеваемость и аттестация
+&lt;/h2&gt;&lt;h3 id="система-оценивания"&gt;Система оценивания
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Оценка&lt;/th&gt;
+&lt;th&gt;Критерии&lt;/th&gt;
+&lt;th&gt;Что означает&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;85-100%&lt;/td&gt;
+&lt;td&gt;Отлично, материал усвоен полностью&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;4&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;65-84%&lt;/td&gt;
+&lt;td&gt;Хорошо, есть незначительные ошибки&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;3&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;45-64%&lt;/td&gt;
+&lt;td&gt;Удовлетворительно, требуется повторение&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;2&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;менее 45%&lt;/td&gt;
+&lt;td&gt;Неудовлетворительно, нужна помощь&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="график-контрольных-работ"&gt;График контрольных работ
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;I четверть:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;15.09 — Контрольная по алгебре&lt;/li&gt;
+&lt;li&gt;30.09 — Контрольная по геометрии&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;II четверть:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;15.11 — Проверочная работа&lt;/li&gt;
+&lt;li&gt;30.11 — Итоговая контрольная&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Полный график:&lt;/strong&gt; &lt;a class="link" href="https://sursky.github.io/huhugo/parents/control_schedule.pdf" &gt;📅 control_schedule.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="-подготовка-к-экзаменам"&gt;🎯 Подготовка к экзаменам
+&lt;/h2&gt;&lt;h3 id="родительское-собрание-егэ-2026"&gt;Родительское собрание &amp;ldquo;ЕГЭ-2026&amp;rdquo;
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Дата:&lt;/strong&gt; 25 января 2026, 18:00&lt;br&gt;
+&lt;strong&gt;Место:&lt;/strong&gt; Актовый зал школы&lt;br&gt;
+&lt;strong&gt;Темы:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Изменения в ЕГЭ-2026&lt;/li&gt;
+&lt;li&gt;Как помочь ребенку готовиться&lt;/li&gt;
+&lt;li&gt;Психологическая поддержка&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Материалы собрания:&lt;/strong&gt; &lt;a class="link" href="https://sursky.github.io/huhugo/parents/ege_meeting.pdf" &gt;📊 presentation_ege.pdf&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="как-помочь-ребенку-с-подготовкой"&gt;Как помочь ребенку с подготовкой
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;span class="lnt"&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-markdown" data-lang="markdown"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;1.&lt;/span&gt; 📅 Составьте реалистичный план подготовки
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;2.&lt;/span&gt; ⏰ Следите за режимом дня (сон 8+ часов)
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;3.&lt;/span&gt; 🥗 Обеспечьте правильное питание
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;4.&lt;/span&gt; 🧘 Регулярные перерывы и физическая активность
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;5.&lt;/span&gt; 😊 Поддержка, а не давление
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

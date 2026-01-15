@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Задачи on Личная страница преподавателя</title><link>https://sursky.github.io/huhugo/tags/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/</link><description>Recent content in Задачи on Личная страница преподавателя</description><generator>Hugo -- gohugo.io</generator><language>ru-ru</language><lastBuildDate>Wed, 14 Jan 2026 15:28:44 +0000</lastBuildDate><atom:link href="https://sursky.github.io/huhugo/tags/%D0%B7%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/index.xml" rel="self" type="application/rss+xml"/><item><title>Методика</title><link>https://sursky.github.io/huhugo/p/%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D0%BA%D0%B0/</link><pubDate>Wed, 14 Jan 2026 15:28:44 +0000</pubDate><guid>https://sursky.github.io/huhugo/p/%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D0%B8%D0%BA%D0%B0/</guid><description>&lt;h2 id="-разработки-уроков-по-математике"&gt;📐 Разработки уроков по математике
+&lt;/h2&gt;&lt;h3 id="уроки-для-7-9-классов"&gt;Уроки для 7-9 классов
+&lt;/h3&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Тема урока&lt;/th&gt;
+&lt;th&gt;Класс&lt;/th&gt;
+&lt;th&gt;Формат&lt;/th&gt;
+&lt;th&gt;Ссылка&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Решение квадратных уравнений&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;Презентация + конспект&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://sursky.github.io/huhugo/methodics/lessons/quadratic.zip" &gt;📁 lesson_8_quadratic.zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Теорема Пифагора&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;Интерактивный урок (GeoGebra)&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://sursky.github.io/huhugo/methodics/geogebra/pythagoras.ggb" &gt;📐 pythagoras.ggb&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Проценты в жизни&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;Проектная работа&lt;/td&gt;
+&lt;td&gt;&lt;a class="link" href="https://sursky.github.io/huhugo/methodics/projects/percents.pdf" &gt;📊 project_percents.pdf&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id="уроки-для-10-11-классов"&gt;Уроки для 10-11 классов
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Производная и её применение&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Уровень: 10 класс (профильный)&lt;/li&gt;
+&lt;li&gt;Формат: Конспект + задачи&lt;/li&gt;
+&lt;li&gt;Файл: &lt;a class="link" href="https://sursky.github.io/huhugo/methodics/lessons/derivative_10.pdf" &gt;📘 derivative_10.pdf&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Задачи с параметрами (ЕГЭ)&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Уровень: 11 класс&lt;/li&gt;
+&lt;li&gt;Формат: Методичка + тесты&lt;/li&gt;
+&lt;li&gt;Файл: &lt;a class="link" href="https://sursky.github.io/huhugo/methodics/ege/parameters.zip" &gt;🎯 parameters_ege.zip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="-интерактивные-материалы"&gt;🎮 Интерактивные материалы
+&lt;/h2&gt;&lt;h3 id="geogebra-приложения"&gt;GeoGebra-приложения
+&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;div class="chroma"&gt;
+&lt;table class="lntable"&gt;&lt;tr&gt;&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code&gt;&lt;span class="lnt"&gt;1
+&lt;/span&gt;&lt;span class="lnt"&gt;2
+&lt;/span&gt;&lt;span class="lnt"&gt;3
+&lt;/span&gt;&lt;span class="lnt"&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class="lntd"&gt;
+&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-javascript" data-lang="javascript"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;// Пример кода для интерактивного построения
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;pointA&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ggbApplet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getPointObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;A&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;pointB&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ggbApplet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getPointObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;B&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;segment&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;ggbApplet&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;evalCommand&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;Segment[A, B]&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description></item></channel></rss>

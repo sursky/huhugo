@@ -21,6 +21,12 @@
 
 # Основные команды Hugo
 
+## Запуск в Codespaces
+Для запуска в GitHub Codespaces используйте команду с указанием baseURL:
+```bash
+hugo server --baseURL="http://localhost:1313/"
+```
+
 ## Создание новых страниц
 
 ### Статическая страница
